@@ -1,0 +1,69 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="adminmaster.master.cs" Inherits="images_adminmaster" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+   
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <link href="css/w3-theme-teal.css" rel="stylesheet" type="text/css" />
+    <link href="css/css.css" rel="stylesheet" type="text/css" />
+    <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <link href="css/w3.css" rel="stylesheet" type="text/css" />
+<style>
+body {font-family: "Roboto", sans-serif
+      
+  color: white;
+  overflow-x: hidden;
+  background-color: #000;
+  background-image: url(images/327002.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center top;"> 
+      }
+.w3-bar-block .w3-bar-item {
+  padding: 16px;
+  font-weight: bold;
+}
+</style>
+</head>
+<body> 
+    <form id="form1" runat="server">
+
+
+       <asp:ContentPlaceHolder id="body" runat="server">
+           
+           <nav class="w3-sidebar w3-bar-block" style="z-index:3;width:200px;" id="mySidebar">
+           <h2  style="width:80%;">
+               Menu</h2>
+           <a class="w3-bar-item w3-button " href="adminhome.aspx">Home</a>
+           <a class="w3-bar-item w3-button" href="Add.aspx">Add</a>
+           <a class="w3-bar-item w3-button" href="delete.aspx">Delete</a>
+           <a class="w3-bar-item w3-button" href="leavestatus.aspx">Leave</a>
+           <a class="w3-bar-item w3-button" href="update.aspx">Update</a>
+           <asp:Button ID="attendanceupdate" runat="server" Text="Attendance Update" 
+               onclick="attup" class="w3-bar-item w3-button"/>
+           <asp:Button ID="Button1" runat="server" Text="Logout" 
+               class="w3-bar-item w3-button" onclick="Button1_Click1"></asp:Button>
+           </nav>
+           <center>
+               <header class="w3-container w3-theme">
+               <h1 style="background-color: #009688">
+                   Employee Management 
+               </h1>
+               </header>
+           </center>
+          
+       </asp:ContentPlaceHolder>
+       <br />
+            <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+            
+            </asp:ContentPlaceHolder>
+    
+   </form>
+</body>
+</html>
